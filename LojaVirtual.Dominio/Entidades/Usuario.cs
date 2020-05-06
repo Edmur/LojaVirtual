@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LojaVirtual.Dominio.Entidades
 {
-    public class Usuario
+    public class Usuario : Entidade
     {
         public int Id { get; set; }
         public string Email { get; set; }
@@ -15,5 +15,10 @@ namespace LojaVirtual.Dominio.Entidades
         /// Um usuário pode ter nenhum ou muitos pedidos
         /// </summary>
         public ICollection<Pedido> Pedidos { get; set; }
+
+        public override void Validate()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
