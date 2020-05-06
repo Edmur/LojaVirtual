@@ -34,6 +34,8 @@ namespace LojaVirtual.Dominio.Entidades
                 AdicionarCritica("Pedido não pode ficar sem item");
             if (string.IsNullOrEmpty(Cep))
                 AdicionarCritica("Cep deve estar preenchido");
+            if (FormaPagamentoId == 0)
+                AdicionarCritica("Não foi informada a forma de pagamento");
 
         }
     }
